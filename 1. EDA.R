@@ -100,7 +100,7 @@ pp9 <- ggplot(df) + geom_boxplot(aes(price, as.factor(school_rating))) + labs(ti
 
 (pp1|pp2|pp3)/(pp4|pp5|pp6)/(pp7|pp8|pp9)
 
-# 7. matrix
+# 7. correlation
 
 # 7.1 correlation matrix 
 
@@ -130,6 +130,7 @@ bptest(naive_model) # Breusch-Pagan test
 ggplot(naive_model, aes(x = .fitted, y = .resid)) + geom_point() +
   geom_hline(yintercept = 0, color = "red") + # The "Zero Error" reference line
   labs(title = "Residual Plot", x = "Fitted", y = "Residuals")
+
 
 
 
