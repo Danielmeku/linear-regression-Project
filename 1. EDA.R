@@ -50,6 +50,7 @@ table(df$renovated)
 # 4.3. missing valued variable(renovation of the house)
 
 mean(is.na(df$year_renovated))*100 # this will tell what percent of the data is missing
+table(df$renovated) # shows the number of renovated Vs not renovated
 
 # 5. presentation of each variable
 # 5.1. response variable(price)
@@ -134,6 +135,7 @@ bptest(naive_model) # Breusch-Pagan test
 ggplot(naive_model, aes(x = .fitted, y = .resid)) + geom_point() +
   geom_hline(yintercept = 0, color = "red") + # The "Zero Error" reference line
   labs(title = "Residual Plot", x = "Fitted", y = "Residuals")
+
 
 
 
