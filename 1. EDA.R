@@ -23,7 +23,7 @@ setwd('C:\\Users\\Dan\\Documents\\Class\\y III sem I\\assignment\\reg')
 df <- RegressionProject_Daniel.Mekuriaw_UGR.4804.16
 
 # rounding the bedroom numbers in each house
-df$bedrooms <- as.integer(round(df$bedrooms))
+df$bathrooms <- as.integer(round(df$bathrooms))
 
 # converting the year_built into age of the house
 df$house_age <- 2025 - df$year_built
@@ -135,6 +135,7 @@ bptest(naive_model) # Breusch-Pagan test
 ggplot(naive_model, aes(x = .fitted, y = .resid)) + geom_point() +
   geom_hline(yintercept = 0, color = "red") + # The "Zero Error" reference line
   labs(title = "Residual Plot", x = "Fitted", y = "Residuals")
+
 
 
 
